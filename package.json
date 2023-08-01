@@ -1,0 +1,33 @@
+{
+  "name": "remix-fetcher-utils",
+  "version": "1.0.0",
+  "description": "Loader/Fetcher LRU client cache for Remix + Global Variables.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArturKot95/remix-fetcher-utils.git"
+  },
+  "homepage": "https://github.com/ArturKot95/remix-fetcher-utils#readme",
+  "keywords": [
+    "remix",
+    "remixjs",
+    "cache",
+    "fetcher",
+    "loader",
+    "lru"
+  ],
+  "author": "Artur Kot",
+  "license": "MIT",
+  "peerDependencies": {
+    "@remix-run/react": "^1.19.1",
+    "@types/react": "^18.2.17",
+    "react": "^18.2.0",
+    "remix": "^1.19.1"
+  },
+  "dependencies": {
+    "fast-equals": "^5.0.1"
+  },
+  "volta": {
+    "node": "20.5.0"
+  }
+}

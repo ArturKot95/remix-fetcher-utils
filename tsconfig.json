@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "declaration": true,
+    "outDir": "./dist", 
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "strictFunctionTypes": false,
+    "skipLibCheck": true,
+    "moduleResolution": "NodeNext"
+  },
+  "include": ["src/index.ts"],
+  "exclude": ["node_modules"],
+}
