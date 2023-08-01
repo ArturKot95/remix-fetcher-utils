@@ -1,4 +1,4 @@
-import { useFetcher } from "@remix-run/react";
+import { SubmitFunction, useFetcher } from "@remix-run/react";
 import { useEffect, useMemo } from "react";
 
 import type { UseMutationHook, UseMutationReturn } from "./useMutation.types";
@@ -11,8 +11,17 @@ export const useMutation: UseMutationHook = (options = {}) => {
   const fetcher = useFetcher();
 
   const returnTuple = useMemo(
-    (): UseMutationReturn => [fetcher.submit, fetcher],
-    [fetcher]
+    (): UseMutationReturn => [
+      (target, submitOptions) =>
+        fetcher.submit(
+          typeof target === "string"
+            ? target
+            : { ...target as object, subaction: options.subaction },
+          { method: "POST", action: options.action, ...submitOptions }
+        ),
+      fetcher,
+    ],
+    [fetcher, options]
   );
 
   useEffect(() => {
