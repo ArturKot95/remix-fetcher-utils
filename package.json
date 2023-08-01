@@ -1,6 +1,6 @@
 {
   "name": "remix-fetcher-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Loader/Fetcher LRU client cache for Remix + Global Variables.",
   "main": "dist/index.js",
   "repository": {
