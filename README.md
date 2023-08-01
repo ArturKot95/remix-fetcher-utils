@@ -15,7 +15,7 @@ npm i remix-fetcher-utils
 First, wrap the code with `AppCacheProvider`, preferably that would be app layout.
 
 ```tsx
-import { AppCacheProvider } from "~/appCache";
+import { AppCacheProvider } from "remix-fetcher-utils";
 
 export default function AppLayout() {
   return (
